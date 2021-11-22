@@ -1,37 +1,108 @@
-## Welcome to GitHub Pages
+## Python-Programming Next Steps
 
-You can use the [editor on GitHub](https://github.com/tom65536/tom65536/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+This collection of Python and software development ressources is directed at Python programmers
+who have just learned the basics and are about to dive into larger projects.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Make sure you know the Language
 
-### Markdown
+You have probably learned all about loops, `if`-statements, variables and functions.
+You might have heared about classes or even have written a couple of classes yourself.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Make sure you also learn about some other aspects as well which you might have neglected so far:
 
-```markdown
-Syntax highlighted code block
+* Exception Handling (`try`, `except`, `finally`, ...)
+* Ressource Handling (`with`-statement)
+* Functional Programming (list comprehensions, map, reduce, iterators, lambdas, ...)
 
-# Header 1
-## Header 2
-### Header 3
+How well do you actually know your primitives? Did you know that the `for`-loop may have
+an `else` branch?
 
-- Bulleted
-- List
+The better you know the language features the more efficient you become in writing down
+your code. You are not forced into workarounds when you know the most appropriate language
+idioms.
 
-1. Numbered
-2. List
+Two Python guides that lead you beyond the very basics I have found here:
 
-**Bold** and _Italic_ and `Code` text
+1. [Advanced Computer Programming in Python](https://advancedpythonprogramming.github.io/)
+   by Karim Pichara and Christian Pieringer, available as web-book and print edition
+2. [A Python Book: Beginning Python, Advanced Python, and Python Exercises](https://www.davekuhlman.org/python_book_01.pdf) by Dave Kuhlman
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+### Don't reinvent the wheel
 
-### Jekyll Themes
+Many problems you will encounter have been solved by many programmers in the past.
+Python offers a huge standard library. Some modules (especially networking, os, data formats)
+you will discover as the obvious solution once it comes to that very specific problem.
+However, there are some modules I recommend to explore before you start writing your next
+piece of code because you should keep them in mind when it comes to every day problems like
+sorting, selecting, data structures, iterating etc.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/tom65536/tom65536/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Become acquainted with at least these standard library modules:
 
-### Support or Contact
+* [`re`](https://docs.python.org/3.9/library/re.html)
+  -- Regular expression operations
+* [`collections`](https://docs.python.org/3.9/library/collections.html)
+  -- Container datatypes
+* [`enum`](https://docs.python.org/3.9/library/enum.html)
+  -- Support for enumeration
+* [`abc`](https://docs.python.org/3.9/library/abc.html)
+  -- Abstract Base Classes
+* [`itertools`](https://docs.python.org/3.9/library/itertools.html)
+  -- Functions creating iterators for efficient looping
+* [`functools`](https://docs.python.org/3.9/library/functools.html)
+  --  Higher-order functions and operations on callable objects
+* [`unittest`](https://docs.python.org/3.9/library/unittest.html)
+  -- Unit testing framework
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+
+## Best Practices
+* Milestones, Development branches, Issues
+* [Semantic Versioning](https://semver.org/)
+* [Keep a ChangeLog](https://keepachangelog.com/)
+* Python Style Guide [PEP8](https://www.python.org/dev/peps/pep-0008/)
+* [Clean Code](https://clean-code-developer.de/)
+  - SOLID
+  - DRY
+  - Composition over Inheritance
+  - [Naming Conventions](https://www.freecodecamp.org/news/clean-coding-for-beginners/)
+* GoF Design Patterns
+ - [Design Patterns in Python](https://python-patterns.guide/)
+ - https://refactoring.guru/design-patterns/python
+* [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+* https://docs.python-guide.org/writing/structure/#structure-of-code-is-key
+
+Start writing typed code from the beginning. Read the documentation
+of these modules and the corresponding PEPs mentioned there:
+* [`typing`](https://docs.python.org/3.9/library/typing.html)
+  -- Support for type hints
+* [`types`](https://docs.python.org/3.9/library/types.html)
+  --  Dynamic type creation and names for built-in types
+
+
+## Tooling
+* bumpversion
+* nox
+* pre-commit
+* whey, flit
+* formatting
+  - black
+  - isort
+* linting
+  - flake8
+  - mypy
+  - import-lint
+  - mccabe
+* testing
+  - (x)doctest
+  - pytest
+* doc
+  - sphinx
+
+
+
+## src layout
+https://docs.pytest.org/en/6.2.x/goodpractices.html
+
+Documenting
+https://realpython.com/documenting-python-code/
